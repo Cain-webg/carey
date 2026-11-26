@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privacidad · Carey</title>
+  <meta name="description" content="Qué datos usa Carey, dónde se guardan y qué servicios externos consulta.">
+  <link rel="icon" href="assets/favicon.ico">
+  <link rel="stylesheet" href="estilos.css">
+  <meta name="theme-color" content="#070c0a">
+</head>
+<body>
+  <a class="salto" href="#contenido">Saltar al contenido</a>
+
+  <header class="cabecera">
+    <div class="contenedor">
+      <a class="marca" href="index.html">
+        <img src="assets/carey.png" width="36" height="36" alt="Tortuga de Carey">
+        <span>Carey</span>
+      </a>
+      <nav class="nav" aria-label="Principal">
+        <a href="index.html#funciones">Funciones</a>
+        <a href="index.html#descargar">Descargar</a>
+        <a href="index.html#preguntas">Preguntas</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido">
+    <section class="documento">
+      <div class="contenedor">
+        <h1>Política de privacidad</h1>
+        <p class="fecha">Fecha: 26 de noviembre de 2026</p>
+
+        <h2>Resumen</h2>
+        <p>Carey funciona en tu equipo. <strong>No tiene cuentas propias, analíticas ni telemetría.</strong></p>
+
+        <h2>Datos locales</h2>
+        <p>Carey guarda en <code>%LOCALAPPDATA%\IslaPrueba</code>:</p>
+        <ul>
+          <li>Ajustes y tareas.</li>
+          <li>Agua registrada.</li>
+          <li>La caché de letras y carátulas.</li>
+          <li>El registro <code>registro.log</code>.</li>
+        </ul>
+        <p>El PIN se guarda solo como hash PBKDF2-SHA256 con sal.</p>
+
+        <h2>Notificaciones de Windows</h2>
+        <p>Carey lee las notificaciones de Windows, con el permiso de Windows, para mostrarlas en la isla y en la pantalla de bloqueo. Nunca salen de tu equipo.</p>
+
+        <h2>Servicios externos</h2>
+        <ul>
+          <li><strong>LRCLIB</strong> (letras) y la búsqueda de <strong>iTunes</strong> (carátulas en alta calidad) reciben solo el título, el artista y la duración de la canción. Las carátulas HD se pueden apagar.</li>
+          <li><strong>Límites de uso de IA</strong>: vienen apagados de fábrica. Si los activas, Carey abre claude.ai, gemini.google.com o chatgpt.com en una ventana propia, en la que <strong>tú inicias sesión</strong>. La sesión (cookies) queda solo en tu equipo, en un perfil aparte. Carey consulta las páginas de uso de esos servicios cada 5 minutos y de ellas solo guarda porcentajes y horas de renovación. «Desconectar» borra esa sesión.</li>
+          <li>ChatGPT también puede leer los registros locales de Codex (<code>~/.codex/sessions</code>), sin red.</li>
+        </ul>
+
+        <h2>Carátulas propias (Pro)</h2>
+        <p>Las fotos que eliges se copian a <code>%LOCALAPPDATA%\IslaPrueba\portadas</code> y no se suben a ningún sitio.</p>
+
+        <h2>Contacto</h2>
+        <p>Para dudas o fallos, usa <a href="https://github.com/Cain-webg/carey/issues">Issues del repositorio</a>.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pie">
+    <div class="contenedor">
+      <span>Carey 1.0 beta 1</span>
+      <nav aria-label="Pie">
+        <a href="index.html">Inicio</a>
+        <a href="https://github.com/Cain-webg/carey/releases">Releases</a>
+        <a href="https://github.com/Cain-webg/carey/issues">Issues</a>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>
